@@ -1,3 +1,9 @@
+Mohon maaf sebelumnya kami tidak mengetahui jika di github bisa bekerja sama untuk membuat kodenya. Kami membuat kodenya dengan cara start session di IntelliJ, sehingga tidak tercatat proses bekerja kami dan siapa yang membuat fitur tertentu. Namun untuk pembagian tugas fiturnya sebagai berikut : 
+
+- Andra : Membuat menu bar (reset game, new game, dan exit), welcome screen, dan icon
+- Fachreza : Membuat timer, difficulty mode, membantu membuat fitur reset game, dan memperbaiki latar belakang kolom jika benar berubah menjadi hijau, jika salah menjadi merah
+- Donelly : Membuat fitur sound effect dan cell remaining
+
 Dari kode diatas manakan kode yang menambahkan fitur dibawah ini
 1. Reset the game.
 2. New Game
