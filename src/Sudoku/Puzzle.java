@@ -14,11 +14,11 @@ package Sudoku;
  * The Sudoku number puzzle to be solved
  */
 public class Puzzle {
-    int[][] numbers = new int[SudokuConstants.GRID_SIZE][SudokuConstants.GRID_SIZE];
-    boolean[][] isGiven = new boolean[SudokuConstants.GRID_SIZE][SudokuConstants.GRID_SIZE];
+    public int[][] numbers = new int[9][9];
+    public boolean[][] isGiven = new boolean[9][9];
 
-    public void newPuzzle(int cellsToGuess) {
-        int[][] hardcodedNumbers = {
+    public void newPuzzle(int clues) {
+        int[][] sample = {
                 {5, 3, 4, 6, 7, 8, 9, 1, 2},
                 {6, 7, 2, 1, 9, 5, 3, 4, 8},
                 {1, 9, 8, 3, 4, 2, 5, 6, 7},
@@ -30,11 +30,15 @@ public class Puzzle {
                 {3, 4, 5, 2, 8, 6, 1, 7, 9}
         };
 
-        for (int row = 0; row < SudokuConstants.GRID_SIZE; ++row) {
-            for (int col = 0; col < SudokuConstants.GRID_SIZE; ++col) {
-                numbers[row][col] = hardcodedNumbers[row][col];
-                isGiven[row][col] = Math.random() * 100 >= cellsToGuess;
-            }
+        for (int row = 0; row < 9; row++) {
+            System.arraycopy(sample[row], 0, numbers[row], 0, 9);
+        }
+
+        // Randomize clues
+        for (int i = 0; i < 81; ++i) {
+            int row = i / 9;
+            int col = i % 9;
+            isGiven[row][col] = Math.random() * 81 < clues;
         }
     }
 }
