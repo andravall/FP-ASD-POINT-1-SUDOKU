@@ -8,4 +8,5 @@ Dari kode diatas manakan kode yang menambahkan fitur dibawah ini
 7. Sound efect  
 8. Icon
 9. Latar belakang kolom jika benar berubah menjadi hijau, jika salah menjadi merah
-10. Cell remaining
+10. Cell remaining
+
